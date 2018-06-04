@@ -1,6 +1,7 @@
 <?php
 
-define("FACETEST_DEBUG",true);
+// API Document web site: https://cloud.tencent.com/document/product/641/14349
+define("FACETEST_DEBUG", true);
 
 // Set your $appid, $secret_id, $secret_key, $web_server_ip
 require_once __DIR__ . "/TencentCloudInfo.php";
@@ -367,9 +368,9 @@ function test()
 {
     global $appid, $secret_key, $secret_id, $web_server_ip;
     $auth = getAuthorization($appid, $secret_id, $secret_key);
-//    tencentCloudFaceAlive($url, $appid, $auth);
-//    tencentCloudAddPerson($appid, $auth, array("test"), "anon", $web_server."/photo/me1.png");
-//    tencentCloudAddFace($appid,$auth,"anon",array($web_server."/photo/me1.png"));
+    tencentCloudFaceAlive($web_server_ip . "/photo/me1.png", $appid, $auth);
+//    tencentCloudAddPerson($appid, $auth, array("test"), "anon", $web_server_ip."/photo/me1.png");
+//    tencentCloudAddFace($appid,$auth,"anon",array($web_server_ip."/photo/me1.png"));
 //    tencentCloudFaceVerify($appid, $auth, "anon", $url);
 //    tencentCloudFaceIdentify($appid, $auth, "test", $url);
 //    tencentCloudDeletePerson($appid,$auth,"anon");
@@ -382,10 +383,10 @@ function test()
 //    tencentCloudGetFaceInfo($appid,$auth,"2605913984284553244");
 //    tencentCloudAddGroupsForPerson($appid,$auth,"anon",array("test1","test2"));
 //    tencentCloudDeleteGroupsForPerson($appid,$auth,"anon",array("test1","test2"));
-//    tencentCloudFaceCompare($appid,$auth,$web_server."/photo/me1.png",$web_server."/photo/me.png");
+//    tencentCloudFaceCompare($appid,$auth,$web_server_ip."/photo/me1.png",$web_server."/photo/me.png");
 //    tencentCloudMultIdentify($appid, $auth, $web_server_ip."/photo/me3.png", "test");
 //    tencentCloudFaceDetect($appid, $auth, $web_server_ip . "/photo/me.png");
-    tencentCloudFaceShape($appid, $auth, $web_server_ip . "/photo/timg.jpg");
+//    tencentCloudFaceShape($appid, $auth, $web_server_ip . "/photo/timg.jpg");
 }
 
 

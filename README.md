@@ -1,5 +1,7 @@
 # TencentCloudFaceRecognitionApi
 
+官方文档：[地址](https://cloud.tencent.com/document/product/641/14349 "腾讯云人脸识别API")
+
 腾讯云人脸识别API的PHP版函数实例
 
 使用方法：
